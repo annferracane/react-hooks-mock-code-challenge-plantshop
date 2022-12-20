@@ -10,8 +10,9 @@ function PlantCard({ plant }) {
   const [inStock, setInStock] = useState(true);
 
   function handleClick(e) {
-    const value = e.target.innerHTML;
-    value === "In Stock" ? setInStock(false) : setInStock(true);
+    const value = e.target.htmlFor;
+    console.log(value);
+
   }
 
   return (

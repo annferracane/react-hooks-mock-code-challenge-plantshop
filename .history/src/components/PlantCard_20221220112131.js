@@ -11,7 +11,7 @@ function PlantCard({ plant }) {
 
   function handleClick(e) {
     const value = e.target.innerHTML;
-    value === "In Stock" ? setInStock(false) : setInStock(true);
+    value = "In Stock" ? setInStock(false) : setInStock(true);
   }
 
   return (

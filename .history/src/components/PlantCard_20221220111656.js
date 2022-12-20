@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function PlantCard({ plant }) {
-
+  
   const id = plant.id;
   const image = plant.image;
   const name = plant.name;
@@ -10,8 +10,9 @@ function PlantCard({ plant }) {
   const [inStock, setInStock] = useState(true);
 
   function handleClick(e) {
-    const value = e.target.innerHTML;
-    value === "In Stock" ? setInStock(false) : setInStock(true);
+    const value = e.target.innerHtml;
+    console.log(value);
+
   }
 
   return (
