@@ -16,25 +16,11 @@ function NewPlantForm({ onAddNewPlant }) {
     console.log("onSubmitHandler Fired");
     // Create configObj
     const newPlant = formData; 
-
-    const configObj = {
-      method: "POST",
-      headers: {
-        "Content-Type" : "application/json"
-      },
-      body: JSON.stringify(newPlant) 
-    }
     // Fetch Post
-    fetch("http://localhost:6001/plants", configObj)
-    .then(resp => resp.json())
-    .then(plant => {
-      // Send new plant up to be rendered
-      onAddNewPlant(plant);
-      // Clear form
-      setFormData(initialFormValues);
-    })
-    .catch(e => console.log(e));
 
+
+    // Send new plant up to PlantPage to be rendered
+    onAddNewPlant();
   }
 
   // Generic function to handle any changes to new plant form
@@ -42,9 +28,9 @@ function NewPlantForm({ onAddNewPlant }) {
     const name = e.target.name;
     const value = e.target.value;
 
-    // Error Handling for Form Values (time-pending)
+    //
 
-    // Set State for formData
+    //
     setFormData({...formData, [name] : value });
   }
 

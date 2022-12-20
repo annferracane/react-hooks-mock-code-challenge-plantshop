@@ -30,10 +30,11 @@ function NewPlantForm({ onAddNewPlant }) {
     .then(plant => {
       // Send new plant up to be rendered
       onAddNewPlant(plant);
-      // Clear form
-      setFormData(initialFormValues);
+
     })
-    .catch(e => console.log(e));
+
+
+    
 
   }
 

@@ -27,13 +27,10 @@ function NewPlantForm({ onAddNewPlant }) {
     // Fetch Post
     fetch("http://localhost:6001/plants", configObj)
     .then(resp => resp.json())
-    .then(plant => {
-      // Send new plant up to be rendered
-      onAddNewPlant(plant);
-      // Clear form
-      setFormData(initialFormValues);
-    })
-    .catch(e => console.log(e));
+    .then(plant => onAddNewPlant())
+
+
+    // Send new plant up to PlantPage to be rendered
 
   }
 

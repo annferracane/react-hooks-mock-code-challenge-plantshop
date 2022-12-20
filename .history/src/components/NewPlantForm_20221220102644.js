@@ -32,6 +32,7 @@ function NewPlantForm({ onAddNewPlant }) {
       onAddNewPlant(plant);
       // Clear form
       setFormData(initialFormValues);
+
     })
     .catch(e => console.log(e));
 

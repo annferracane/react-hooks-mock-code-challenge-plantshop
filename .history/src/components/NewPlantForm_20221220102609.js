@@ -31,9 +31,12 @@ function NewPlantForm({ onAddNewPlant }) {
       // Send new plant up to be rendered
       onAddNewPlant(plant);
       // Clear form
-      setFormData(initialFormValues);
+
     })
     .catch(e => console.log(e));
+
+
+    
 
   }
 

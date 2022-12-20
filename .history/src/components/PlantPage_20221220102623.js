@@ -7,7 +7,6 @@ function PlantPage({ plants }) {
 
   function addNewPlant(plant) {
     console.log("addNewPlant");
-    console.log(plant);
 
   }
 
