@@ -21,14 +21,12 @@ function PlantPage() {
     setPlants(newPlants);
   }
 
-  function searchPlants(e) {
-    console.log(e.target.value);
-  }
+  function searchPlants
 
   return (
     <main>
       <NewPlantForm onAddNewPlant={ addNewPlant }/>
-      <Search searchHandler={ searchPlants }/>
+      <Search />
       <PlantList plants={ plants }/>
     </main>
   );

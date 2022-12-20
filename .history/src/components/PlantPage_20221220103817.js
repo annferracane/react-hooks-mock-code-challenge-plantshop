@@ -22,7 +22,7 @@ function PlantPage() {
   }
 
   function searchPlants(e) {
-    console.log(e.target.value);
+
   }
 
   return (
