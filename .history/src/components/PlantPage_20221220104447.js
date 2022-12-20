@@ -13,7 +13,7 @@ function PlantPage() {
     .then(resp => resp.json())
     .then((plants) => {
       setPlants(plants);
-      setPlantDisplay(plants);
+      //setPlantDisplay(plants);
     })
     .catch((e) => console.log(e));
   },[]);
@@ -33,7 +33,7 @@ function PlantPage() {
     <main>
       <NewPlantForm onAddNewPlant={ addNewPlant }/>
       <Search searchHandler={ searchPlants }/>
-      <PlantList plants={ plantDisplay }/>
+      <PlantList plants={ plants }/>
     </main>
   );
 }

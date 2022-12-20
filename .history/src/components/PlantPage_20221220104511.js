@@ -33,7 +33,7 @@ function PlantPage() {
     <main>
       <NewPlantForm onAddNewPlant={ addNewPlant }/>
       <Search searchHandler={ searchPlants }/>
-      <PlantList plants={ plantDisplay }/>
+      <PlantList plants={ plantDisplaygi }/>
     </main>
   );
 }

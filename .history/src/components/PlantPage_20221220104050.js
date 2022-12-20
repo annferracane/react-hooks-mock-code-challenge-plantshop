@@ -6,15 +6,13 @@ import Search from "./Search";
 function PlantPage() {
 
   const [plants, setPlants] = useState([]);
-  const [plantDisplay, setPlantDisplay] = useState([]);
+
+  const [] = useState[plants];
 
   useEffect(() => {
     fetch("http://localhost:6001/plants")
     .then(resp => resp.json())
-    .then((plants) => {
-      setPlants(plants);
-      setPlantDisplay(plants);
-    })
+    .then((plants) => setPlants(plants))
     .catch((e) => console.log(e));
   },[]);
 
@@ -33,7 +31,7 @@ function PlantPage() {
     <main>
       <NewPlantForm onAddNewPlant={ addNewPlant }/>
       <Search searchHandler={ searchPlants }/>
-      <PlantList plants={ plantDisplay }/>
+      <PlantList plants={ plants }/>
     </main>
   );
 }
