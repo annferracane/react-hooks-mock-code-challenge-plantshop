@@ -11,12 +11,13 @@ function App() {
     .then(resp => resp.json())
     .then((plants) => setPlants(plants))
     .catch((e) => console.log(e));
+
   },[]);
 
   return (
     <div className="app">
       <Header />
-      <PlantPage plants={plants}/>
+      <PlantPage />
     </div>
   )
   

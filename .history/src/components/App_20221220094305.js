@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <PlantPage plants={plants}/>
+      <PlantPage />
     </div>
   )
   

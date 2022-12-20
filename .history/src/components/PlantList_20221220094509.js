@@ -3,9 +3,9 @@ import PlantCard from "./PlantCard";
 
 function PlantList({plants}) {
 
-  const plantArray = plants.map(plant => <PlantCard plant={plant}/>)
+  const plantArray = plants.map(plant => <PlantCard></PlantCard>)
   return (
-    <ul className="cards">{plantArray}</ul>
+    <ul className="cards">{/* render PlantCards components in here */}</ul>
   );
 }
 

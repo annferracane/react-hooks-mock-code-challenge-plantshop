@@ -10,13 +10,14 @@ function App() {
     fetch("http://localhost:6001/plants")
     .then(resp => resp.json())
     .then((plants) => setPlants(plants))
-    .catch((e) => console.log(e));
+  .catch()
+
   },[]);
 
   return (
     <div className="app">
       <Header />
-      <PlantPage plants={plants}/>
+      <PlantPage />
     </div>
   )
   

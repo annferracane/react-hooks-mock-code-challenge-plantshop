@@ -7,7 +7,7 @@ function PlantCard({ plant }) {
   const price = plant.price;
 
   return (
-    <li className="card" key={ id }>
+    <li className="card" key={}>
       <img src={ image } alt={ name } />
       <h4>{ name }</h4>
       <p>Price: { price }</p>

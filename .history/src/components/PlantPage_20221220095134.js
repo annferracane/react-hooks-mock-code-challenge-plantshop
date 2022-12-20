@@ -4,11 +4,6 @@ import PlantList from "./PlantList";
 import Search from "./Search";
 
 function PlantPage({ plants }) {
-
-  function onSubmit() {
-    console.log("submitted");
-  }
-  
   return (
     <main>
       <NewPlantForm onSubmitHandler={ onSubmit }/>
