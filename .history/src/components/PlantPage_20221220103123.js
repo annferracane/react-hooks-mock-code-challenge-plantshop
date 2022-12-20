@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import NewPlantForm from "./NewPlantForm";
 import PlantList from "./PlantList";
 import Search from "./Search";
 
-function PlantPage() {
+function PlantPage({ plants, addNewPlant }) {
 
   const [plants, setPlants] = useState([]);
 
@@ -17,8 +17,7 @@ function PlantPage() {
   function addNewPlant(plant) {
     console.log("addNewPlant");
     console.log(plant);
-    const newPlants = [...plants, plant];
-    setPlants(newPlants);
+
   }
 
   return (
