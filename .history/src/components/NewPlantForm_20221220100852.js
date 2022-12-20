@@ -1,25 +1,22 @@
 import React, { useState } from "react";
 
-function NewPlantForm({ onAddNewPlant }) {
+function NewPlantForm({ addNewPlant }) {
 
   const initialFormValues = {
-    name: "",
-    image: "",
-    price: ""
+    name: null,
+    image: null,
+    price: null
   };
 
   const [formData, setFormData] = useState(initialFormValues);
 
-  function onSubmitHandler(e) {
-    e.preventDefault();
-    console.log("onSubmitHandler");
-    onAddNewPlant();
+  function onSubmitHandler() {
+
+    addNewPlant();
   }
 
-  function handleFormChange(e) {
-    console.log(e.target.value);
-    
-    console.log("handleFormChange");
+  function handleFormChange() {
+    console.log("")
   }
 
   return (

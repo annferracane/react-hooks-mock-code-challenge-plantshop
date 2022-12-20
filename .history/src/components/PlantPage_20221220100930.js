@@ -6,13 +6,13 @@ import Search from "./Search";
 function PlantPage({ plants }) {
 
   function addNewPlant() {
-    console.log("addNewPlant");
+    
 
   }
 
   return (
     <main>
-      <NewPlantForm onAddNewPlant={ addNewPlant }/>
+      <NewPlantForm addNewPlant={ addNewPlant }/>
       <Search />
       <PlantList plants={ plants }/>
     </main>

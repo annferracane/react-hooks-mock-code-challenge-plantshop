@@ -3,9 +3,9 @@ import React, { useState } from "react";
 function NewPlantForm({ onAddNewPlant }) {
 
   const initialFormValues = {
-    name: "",
-    image: "",
-    price: ""
+    name: null,
+    image: null,
+    price: null
   };
 
   const [formData, setFormData] = useState(initialFormValues);
@@ -13,12 +13,10 @@ function NewPlantForm({ onAddNewPlant }) {
   function onSubmitHandler(e) {
     e.preventDefault();
     console.log("onSubmitHandler");
-    onAddNewPlant();
+    addNewPlant();
   }
 
-  function handleFormChange(e) {
-    console.log(e.target.value);
-    
+  function handleFormChange() {
     console.log("handleFormChange");
   }
 

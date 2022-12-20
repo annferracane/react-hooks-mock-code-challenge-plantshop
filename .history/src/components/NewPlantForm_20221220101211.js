@@ -5,7 +5,7 @@ function NewPlantForm({ onAddNewPlant }) {
   const initialFormValues = {
     name: "",
     image: "",
-    price: ""
+    price: 0
   };
 
   const [formData, setFormData] = useState(initialFormValues);
@@ -17,7 +17,6 @@ function NewPlantForm({ onAddNewPlant }) {
   }
 
   function handleFormChange(e) {
-    console.log(e.target.value);
     
     console.log("handleFormChange");
   }

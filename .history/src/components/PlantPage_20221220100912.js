@@ -5,14 +5,17 @@ import Search from "./Search";
 
 function PlantPage({ plants }) {
 
-  function addNewPlant() {
-    console.log("addNewPlant");
+  function addNewPlant(e) {
+    
+    console.log("submitted");
+    console.log(e.target); 
 
+    const formData = null;
   }
 
   return (
     <main>
-      <NewPlantForm onAddNewPlant={ addNewPlant }/>
+      <NewPlantForm onSubmitHandler={ onFormSubmit }/>
       <Search />
       <PlantList plants={ plants }/>
     </main>

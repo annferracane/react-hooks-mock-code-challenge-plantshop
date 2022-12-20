@@ -17,7 +17,7 @@ function NewPlantForm({ onAddNewPlant }) {
   }
 
   function handleFormChange(e) {
-    console.log(e.target.value);
+    console.log
     
     console.log("handleFormChange");
   }

@@ -6,7 +6,7 @@ import Search from "./Search";
 function PlantPage({ plants }) {
 
   function addNewPlant() {
-    console.log("addNewPlant");
+    
 
   }
 
