@@ -33,6 +33,7 @@ function PlantPage() {
     });
     
     setPlantDisplay(filteredPlants);
+    console.log(filteredPlants);
   }
 
   return (

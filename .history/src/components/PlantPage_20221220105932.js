@@ -6,8 +6,8 @@ import Search from "./Search";
 function PlantPage() {
 
   const [plants, setPlants] = useState([]);
-  const [plantDisplay, setPlantDisplay] = useState(plants);
-  
+  const [plantDisplay, setPlantDisplay] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:6001/plants")
     .then(resp => resp.json())
@@ -26,13 +26,14 @@ function PlantPage() {
   }
 
   function searchPlants(e) {
-    setPlantDisplay(plants);
+    console.log(e.target.value);
     const searchValue = e.target.value.toLowerCase();
-    const filteredPlants = plants.filter(plant => {
+    const filteredPlants = [...plantDisplay];
+    const filteredPlants = plantDisplay.filter(plant => {
       return plant.name.toLowerCase().includes(searchValue);
     });
-    
-    setPlantDisplay(filteredPlants);
+    //setPlantDisplay(filteredPlants);
+    console.log(filteredPlants);
   }
 
   return (
