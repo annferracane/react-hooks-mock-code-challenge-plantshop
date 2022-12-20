@@ -20,8 +20,9 @@ function NewPlantForm({ onAddNewPlant }) {
     const name = e.target.name;
     const value = e.target.value;
 
+    setFormData({...formData, [name] : e.target.value });
+    
     console.log("handleFormChange");
-    setFormData({...formData, [name] : value });
   }
 
   return (
